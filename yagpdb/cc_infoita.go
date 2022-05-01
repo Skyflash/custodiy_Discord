@@ -1,6 +1,6 @@
 {{/* Custom Command */}}
 {{/* Fornisce le info di base sul progetto */}}
-{{/* Utilizzo: -welcome */}}
+{{/* Utilizzo: -infoita */}}
 
 {{ $icon := (joinStr "" "https://cdn.discordapp.com/icons/" (toString .Guild.ID) "/" .Guild.Icon ".png") }}
 {{ $tokens := "1.000.000"}}
@@ -18,19 +18,19 @@
 {{ $avatar := (joinStr "" "https://cdn.discordapp.com/avatars/" (toString .User.ID) "/" .User.Avatar ".png") }}
 
 {{$embed := cembed 
-	"title" "Welcome to the CUSTODIY Official Discord Server!"
-	"description" "**What is CUSTODIY?**\n CUSTODIY is a WEBAPP with almost all stablecoins on the market in each currency Smart contract opening with or without approver\n\n**THE PROJECT**" 
+	"title" "Cosa è CUSTODIY?"
+	"description" "**CUSTODIY** è una WEBAPP con quasi tutte le stablecoin in commercio, in ogni valuta.\nApertura smart contract con o senza approvatore.\n\n**IL PROGETTO:**" 
 	"color" 0xf07b05 
 	"fields" 
 		(cslice 
-            (sdict "name" "🏦 Total coins" "value" $tokens "inline" false)
+            (sdict "name" "🏦 Monete Totali" "value" $tokens "inline" false)
 
-			(sdict "name" "💰 Buy Taxes" "value" $buy "inline" true)
-			(sdict "name" "💰 Sell Taxes" "value" $sell "inline" true)	
-
-			(sdict "name" "✅ Verified Contract" "value" $contract "inline" false)
+			(sdict "name" "💰 Tasse di acquisto" "value" $buy "inline" true)
+			(sdict "name" "💰 Tasse di vendita" "value" $sell "inline" true)
 			
-			(sdict "name" "The Website" "value" $website "inline" false)
+			(sdict "name" "✅ Contratto Verificato" "value" $contract "inline" false)
+
+            (sdict "name" "Sito Web" "value" $website "inline" false)
             (sdict "name" "🇬🇧 Telegram" "value" $telegram "inline" true)
             (sdict "name" "🇮🇹 Telegram" "value" $telegramita "inline" true)
             (sdict "name" "🇨🇳 Telegram" "value" $telegramchn "inline" true)
@@ -41,7 +41,7 @@
 				(sdict "name" "CUSTODIY - Do It Yourself" "url" "https://www.custodiy.com" "icon_url" "https://images-ext-1.discordapp.net/external/SBstNUrTzLUqZ7Xu4rJurEA_BXy5zl-Bgj3Xxqsbpos/https/cdn.discordapp.com/icons/960427400825540669/67f4ac4e1978fa08a01ca5bffac7a02c.png") 
 			"thumbnail" (sdict "url" $icon) 
 			"footer" 
-				(sdict "text" "Custodiy, the most innovative project" "icon_url" "https://images-ext-1.discordapp.net/external/SBstNUrTzLUqZ7Xu4rJurEA_BXy5zl-Bgj3Xxqsbpos/https/cdn.discordapp.com/icons/960427400825540669/67f4ac4e1978fa08a01ca5bffac7a02c.png") 
+				(sdict "text" "Custodiy, il progetto più innovativo della rete!" "icon_url" "https://images-ext-1.discordapp.net/external/SBstNUrTzLUqZ7Xu4rJurEA_BXy5zl-Bgj3Xxqsbpos/https/cdn.discordapp.com/icons/960427400825540669/67f4ac4e1978fa08a01ca5bffac7a02c.png") 
 			}}
 
 {{ sendMessage nil $embed }}
