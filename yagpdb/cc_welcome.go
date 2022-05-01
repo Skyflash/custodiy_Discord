@@ -1,6 +1,6 @@
 {{/* Custom Command */}}
 {{/* Fornisce le info di base sul progetto */}}
-{{/* Utilizzo: -info */}}
+{{/* Utilizzo: -welcome */}}
 
 {{ $icon := (joinStr "" "https://cdn.discordapp.com/icons/" (toString .Guild.ID) "/" .Guild.Icon ".png") }}
 {{ $tokens := "1.000.000"}}
