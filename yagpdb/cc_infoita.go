@@ -14,7 +14,7 @@
 {{ $fbpage := "https://www.facebook.com/custodiyofficial"}}
 {{ $twitter:= "https://twitter.com/Custodiy1"}}
 {{ $instagram := "https://instagram.com/custodiyapp"}}
-{{ $discordserver := "https://discord.me/custodiyofficial" }}
+{{ $discordserver := "https://discord.gg/dJmaqdWj2r" }}
 {{ $avatar := (joinStr "" "https://cdn.discordapp.com/avatars/" (toString .User.ID) "/" .User.Avatar ".png") }}
 
 {{$embed := cembed 
@@ -36,7 +36,8 @@
             (sdict "name" "🇨🇳 Telegram" "value" $telegramchn "inline" true)
             (sdict "name" "Twitter" "value" $twitter "inline" false)
 			(sdict "name" "Facebook" "value" $fbpage "inline" false)
-			(sdict "name" "Instagram" "value" $instagram "inline" false)) 
+			(sdict "name" "Instagram" "value" $instagram "inline" false)
+			(sdict "name" "Discord" "value" $discordserver "inline" false)) 
 			"author" 
 				(sdict "name" "CUSTODIY - Do It Yourself" "url" "https://www.custodiy.com" "icon_url" "https://images-ext-1.discordapp.net/external/SBstNUrTzLUqZ7Xu4rJurEA_BXy5zl-Bgj3Xxqsbpos/https/cdn.discordapp.com/icons/960427400825540669/67f4ac4e1978fa08a01ca5bffac7a02c.png") 
 			"thumbnail" (sdict "url" $icon) 
